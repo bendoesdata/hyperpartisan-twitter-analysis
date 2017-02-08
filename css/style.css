@@ -1,0 +1,105 @@
+#body-container {
+  position: fixed;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  background-color: #FDF8F2;
+}
+
+#jumbotron {
+  background-image: url('Backlit_keyboard.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.header {
+  color: white;
+  background-color: rgba(22, 22, 21, 0.7);
+  padding-top: 0px;
+  margin-top: 100px;
+  max-width: 1500px;
+}
+
+.photo-credit {
+  font-size: 10px;
+  color: gray;
+}
+
+.caption {
+  font-size: 16px;
+  color: #848484;
+  margin-top: 10px;
+}
+
+h1 {
+  font-family: 'Unna', sans-serif;
+  font-size: 3.8em;
+  margin-top: 50px;
+}
+p {
+  max-width: 600px;
+  line-height: 1.4;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'EB Garamond', serif;
+}
+
+.uk-panel {
+  border: none;
+    background-color: #FDF8F2;
+}
+
+.chart {
+  margin: auto;
+  max-width: 600px;
+  height: 600px
+}
+
+.highcharts-tooltip h3 {
+    margin: 0.3em 0;
+}
+
+.highcharts-tooltip div span {
+    margin: 0.3em 0;
+    max-width: 450px;
+}
+
+.highcharts-tooltip p {
+    margin: 0.3em 0;
+    max-width: 400px;
+    font-size: 10px;
+}
+
+.tab-nav a {
+  color: black;
+}
+
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.footer-panel {
+  background-color: transparent;
+  border: none;
+  color: white;
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Hyperpartisan</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Load jQuery -->
+<script src="uikit/js/jquery-3.0.js"></script>
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Amiri|EB+Garamond|Padauk|Unna" rel="stylesheet">
+
+<!-- Load Uikit file -->
+<script src="uikit/js/uikit.min.js"></script>
+
+<!-- Load Highcharts -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+
+
+<!-- Load custom css styling -->
+<link rel="stylesheet" href="uikit/css/uikit.almost-flat.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- load external JS sheets -->
+<script src="js/bubble.js"></script>
+<script src="js/drilldown.js"></script>
+<script src="js/pie.js"></script>
+<script src="js/column.js"></script>
+<script src="js/breitbart-tweets.js"></script>
+<!--<script src="js/timeline.js"></script>-->
+
+</head>
+
+<body>
+
+<!-- Jumbotron Header -->
+<div class="uk-container-center uk-grid"  id="jumbotron" style="background-color: black; height:500px">
+  <div class="uk-container uk-container-center header" style="width: 100%">
+
+      <div style="margin-left: 13%; max-width: 600px">
+
+        <h1 style="color: white;" class="uk-heading-large uk-margin-large-bottom">How hyperpartisan publishers are tapping into Twitter</h1>
+        <p style="font-family: 'Helvetica Neue'; font-size: 1.2em">
+          <span style="color: white; font-style: italic">A Twitter analysis by Benjamin Cooley</span>
+        </p>
+        <ul class="share-buttons" style="margin-bottom: 200px">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fhyperpartisan%2Findex.html&t=how%20hyperpartisan%20publishers%20are%20tapping%20into%20twitter" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="images/flat_web_icon_set/inverted/Facebook.png"></a></li>
+          <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fhyperpartisan%2Findex.html&text=how%20hyperpartisan%20publishers%20are%20tapping%20into%20twitter:%20http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fhyperpartisan%2Findex.html&via=bnj_cooley" target="_blank" title="Tweet"><img alt="Tweet" src="images/flat_web_icon_set/inverted/Twitter.png"></a></li>
+          <li><a href="https://plus.google.com/share?url=http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fhyperpartisan%2Findex.html" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="images/flat_web_icon_set/inverted/Google+.png"></a></li>
+          <li><a href="mailto:?subject=how%20hyperpartisan%20publishers%20are%20tapping%20into%20twitter&body=Hyperpartisan%20publishers%20have%20been%20consistently%20linked%20to%20producing%20false%20or%20partially%20false%20news%20stories%20on%20Facebook.%20But%20what's%20their%20strategy%20on%20Twitter%3F:%20http%3A%2F%2Figor.gold.ac.uk%2F~bcool001%2Fhyperpartisan%2Findex.html" target="_blank" title="Send email"><img alt="Send email" src="images/flat_web_icon_set/inverted/Email.png"></a></li>
+        </ul>
+
+      </div>
+
+  </div>
+</div>
+
+<div class="uk-container uk-container-center uk-margin-top">
+  <p class="photo-credit">By © <a href="//commons.wikimedia.org/wiki/User:Colin" title="User:Colin">User:Colin</a>&nbsp;/&nbsp;<a href="//commons.wikimedia.org/wiki/Main_Page" title="Main Page">Wikimedia Commons</a>, <a href="http://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=30343877">Link</a>  </p>
+     <ul class="uk-grid" data-uk-grid-margin>
+
+        <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-4-6">
+            <div class="uk-panel uk-panel-box">
+                <p>
+                  <br />
+                  <span style="font-size: 32px">F</span>ake news has plagued the internet ever since the beginning of the web; but never before has it’s potential for disruption been so clearly seen than the 2016 presidential election. In the months leading up to the American general election, multiple websites spread stories containing entirely or partially false information about both Donald Trump and Hillary Clinton.
+<br /><br />
+                  Though vastly different in ideology, many of the worst publishers of fake news still shared two things in common: a dependence on social media and a clear partisan-divide.
+<br /><br />
+                  In October, Buzzfeed published <a href="https://www.buzzfeed.com/craigsilverman/partisan-fb-pages-analysis?utm_term=.qeGMjVvbNm#.cgjvK2G7OR"> an investigative report</a>  on a few of these ‘hyperpartisan’ websites. The article compared the media output of three hyperpartisan Facebook pages from right and left wing, along with three traditional, mainstream news sources. They found that the hyperpartisan pages posted up to 20 times more false or partially false information than mainstream publishers (read their methodology <a href='https://github.com/BuzzFeedNews/2016-10-facebook-fact-check'>here</a>).
+<br /><br />
+                  Facebook has since become central to the ‘fake news’ debate, and continues to be a source of anxiety for traditional journalism outlets. Many have blamed the rise of fake news on Facebook's <a href="https://www.theguardian.com/us-news/2016/nov/16/facebook-bias-bubble-us-election-conservative-liberal-news-feed">filter bubble effect</a>, or the sheltering of opposing viewpoints through the networks highly personalized algorithm.
+<br /><br />
+                  But despite having fewer total users, Twitter has also recently been thrown into the political discourse. As the chosen microphone of the now President Trump, it’s significance as a political battleground has been even further cemented in the public eye.
+<br /><br />
+                  Hyperpartisan sites may get more shares out of Facebook, but their role on Twitter can be equally as impactful. And although it’s a smaller sample size, the analysis found in Buzzfeed’s piece seems to beg another question: what about Twitter? How are hyperpartisan sites operating on what is arguably the second most influential social media network in American politics?
+<br /><br />
+                  Fact-checking hundreds of articles published by these outlets requires lots of time and dedicated staff. But fortunately for those lonely freelancers (me, at present), an analysis of the quantity, style and strategy behind their tweets can be started through a bit of coding know-how and an inquisitive eye.
+<br /><br />
+                  From the evening of Dec 9, 2016 to Monday, Dec 12, I scraped twitter for the outputs of ten different hyperpartisan accounts: five from the left, and five from right. These accounts were chosen strategically for their follower count, frequency of reference in other news stories and clear leaning to either neoliberal or conservative ideologies. While the Buzzfeed methodology was used for inspiration, only one of their publishers is on this list. As the data reveals, a dominant Facebook presence does not always transfer over to the Twitter network. This being the case, I tried to choose a range of publishers that would be recognizable as catering to a partisan audience.
+<br /><br />
+                  After scraping for an entire weekend, I gathered a dataset of 65,083 tweets. During that time, no particular breaking news report appeared, but the CIA report on Russian interference in the election was still quite fresh in the media coverage.
+<br /><br />
+                </p>
+<p style="text-align: center; margin: auto"><a href="#top-of-panel" class="uk-button" data-uk-smooth-scroll>Explore the data</a></p>
+
+            </div>
+        </li>
+
+        <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-2-6" style="margin-top:200px">
+            <div class="uk-panel uk-panel-box">
+                <div style="margin-bottom: 200px">
+                  <img src="images/Trump-podium.jpg" />
+                  <p class="photo-credit">
+                    By <a href="//commons.wikimedia.org/wiki/User:MichaelVadon" title="User:MichaelVadon">Michael Vadon</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=51236095">Link</a>
+                  </p>
+                  <p>
+                    Trump addresses a rally at Marrior Marquis NYC in Sepember, 2016. His unpredictable rise was aided in part by hyperpartisan sites.
+                  </p>
+                </div>
+                <div id="columnChart">
+
+                </div>
+            </div>
+        </li>
+
+        <li id="top-of-panel" class="uk-width-small-1-1 uk-width-medium-2-3 uk-width-large-4-6" style="margin-top:200px">
+            <div class="uk-panel uk-panel-box">
+                <h1 style="font-size: 2.7; text-align: center; margin-bottom: 20px; margin-top: 50px">Explore the data</h1>
+                <ul class="uk-tab uk-tab-grid uk-tab-bottom" data-uk-tab style="margin-bottom: 20px">
+                  <li class="uk-width-1-3 uk-active tab-nav" id="tab1"><a style="color: black; font-weight: bold" href="">1) Who tweeted what?</a></li>
+                  <li class="uk-width-1-3 tab-nav" id="tab2"><a style="color: black; font-weight: bold" href="tab2">2) Text analysis</a></li>
+                  <li class="uk-width-1-3 tab-nav" id="tab3"><a style="color: black; font-weight: bold" href="">3) Key influencers</a></li>
+                </ul>
+                <script>
+
+
+                        document.querySelector("#tab2").addEventListener("click", function changetab2(){
+                          document.querySelector("#second").style.display = "block";
+                          document.querySelector("#first").style.display = "none";
+                          document.querySelector("#third").style.display = "none";
+
+                });
+
+                document.querySelector("#tab3").addEventListener("click", function(changetab3){
+                  document.querySelector("#second").style.display = "none"
+                  document.querySelector("#first").style.display = "none"
+                  document.querySelector("#third").style.display = "block"
+                });
+
+                document.querySelector("#tab1").addEventListener("click", function(changetab1){
+                  document.querySelector("#second").style.display = "none";
+                  document.querySelector("#first").style.display = "block";
+                  document.querySelector("#third").style.display = "none";
+                });
+
+                </script>
+                <div id="first">
+                  <div id="container" class="chart" style="height: 400px; min-width: 310px; max-width: 600px; margin: 0 auto"></div>
+                  <p class="caption">
+                    Half of the top ten accounts were from hyperpartisan accounts. When accounting for number of followers, the bubbles that are largest and highest up on the chart projet the most influence.
+                  </p>
+                  <hr />
+                  <p style="margin-top: 20px">
+                    Though the accounts with a high amount of followers generally tweeted most, this formula didn’t always apply, especially when it came to individual users. 14 users from the 27,000 scraped tweeted more than 100 times over the three-day period. Of these, 50% were hyperpartisan publishers. OccupyDemocrats tweeted the most of the publishers being tracked, despite it’s relatively small size of followers at around 21,000.
+<br /><br />
+                    The top tweeter for the weekend was not a publisher, but instead an account called <a href="https://twitter.com/music2c" target="_blank">@music2c</a>, the “official account for Contemporary Jazz musician Norman Evans”. Some quick research revealed that Norman Evans appears to be both real and a jazz musician; but his Twitter account might be using some sort of IFTT algorithm to auto-retweet content, or the man just plain doesn’t get how to promote himself on Twitter. Either way, whoever is behind the music2c account is clearly a democrat (or strongly left-leaning) as nearly all his tweets were retweets of one of the 5 hyperpartisan twitter accounts being tracked. The number two tweeter for the weekend (sox_morgan) followed a similar trend: small amount of followers, and lots of retweets from liberal publishers.
+<br /><br />
+                    But among the top ten tweeters are also a healthy dose of extreme right-wing accounts. Predictably, one of the hyperpartisan, right-wing fanboys has the Trump-linked adjective “deplorable” in his account name and another user has a one-word hashtag in their description: #PATRIOT.
+<br /><br />
+                    After analysing the profiles of top tweeters for the time period, it became clear that followers of the hyperpartisan accounts largely matched their tone and ideology. Users seemed to fall more clearly into pro-Trump or anti-Trump camps than Republican vs. Democrat. Given the political climate, and that the period of scraping took place only weeks before the inauguration, this is partly to be expected. But the distinction also may suggest a subtle yet significant shift in bipartisan politics in America. You are no longer a supporter of small government versus big government; you’re either for the Trump revolution, or against it.
+<br /><br />
+                    The dataset contains 48,437 total users, contributing a total of 18,067 original tweets. With a dataset of over 65,000 entries, this means that 72% of tweets from this group were retweets.
+<br /><br />
+<div id="pieChart" class="chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+<br /><br />
+<p>
+                    But given that the main accounts being tracked are publishers, this isn’t too surprising. Only about 31% of users have geocoded accounts, so tracking exactly where these tweets are coming from is a bit difficult. And of those that do have geocoded accounts, some choose to get cheeky with their reported location, such as “A shire far away” or “A blue dot in a red state”. Others gave ambiguous locations, such as USA, or just left the field blank.
+</p>
+<br /><br />
+
+<p style="text-align: center; margin: auto"><a href="#top-of-panel" class="uk-button" data-uk-smooth-scroll>Continue reading...</a></p>
+
+
+
+                  </p>
+</div>
+
+
+<div id="second" style="display: none">
+
+
+<a href="images/wordcloud-left.svg" target="_blank" data-uk-lightbox-type="image" data-lightbox-type="iframe" title="Right-wing Hyperpartisan Word Cloud"><img src="images/wordcloud-left.svg" style="width: 100%" alt="wordcloud" /></a>
+<p class="caption">
+  <b>Left-wing Word Cloud:</b> The above word cloud was taken from the list of original tweets published by left-wing hyperpartisans. Click to see full size image.
+</p>
+<hr />
+                    <p>
+                      Across the political spectrum, a few keywords continued to appear throughout. A word count analysis of all tweets revealed words like “Trump” and “Russia” appearing in the text of both right and left-wing accounts. This can likely be traced to the surge of news coverage on Russia’s alleged interference in the US Presidential election in 2016. Both parties also tended to use words like “breaking news” or “fake”.
+<br /><br />
+                      But individual word counts can only reveal so much. Both right and left-wing hyperpartisan accounts will obviously be tweeting about Trump, but with every different opinions. A look at common phrases from the dataset shows left-wing hyperpartisan accounts as much more concerned about the Russian hacking. Phrases like  “Russia intervened” and “CIA report” appear more frequently. In addition, a few non-Trump related phrases appeared near the top as well, such as “the internet is moving to Canada” and “doesn’t want to combat climate change.” The target audience of these tweets seems quite clear: young, social-justice-oriented professionals enchanted by activism and disillusioned with traditional politics.
+<br /><br />
+                      By contrast, the phrases coming from right-wing hyperpartisan accounts were much harder to define. Apart from the unifying mantra of all things “Trump”, there were few phrases that appeared multiple times which shared a common theme. This is likely due to the preferred style of link-commentary — the text that comes before a news story link — used by right-wing hyperpartisan accounts.
+<br /><br />
+</p>
+<a href="images/wordcloud-right.svg" target="_blank" data-uk-lightbox-type="image" data-lightbox-type="iframe" title="Right-wing Hyperpartisan Word Cloud"><img src="images/wordcloud-right.svg" style="width: 100%"  alt="wordcloud" /></a>
+<p class="caption">
+  <b>Right-wing Word Cloud:</b> Click to see full image.
+</p>
+<hr />
+<p>
+<br /><br />
+                      As publishers of news (or at the very least least, a form of words and pictures), nearly all tweets from hyperpartisan accounts contained links back to stories. But one of the key differences in style of tweet came down to the text that came before each link. Some publishers leaned towards the traditional approach taken by media outlets, a version of summarizing or rephrasing the headline of the story. Many tried to push the boundaries of normal headlining and appeal to the millennial-minded, with titles like <a href="https://twitter.com/dailykos/status/822647587744452608">“Dear Good Morning, delete your Twitter account”</a> and <a href="https://twitter.com/MotherJones/status/822666310337363970">“Trump’s first move as president: screwing over homeowners”</a>.
+<br /><br />
+                      Other accounts preferred a more sarcastic, snarky tone with short comments encoded with Internet meme culture and abbreviations. This method assumes the reader will see the headline in the link preview, and instead leaves a one-word or phrase comment like <a href="https://twitter.com/BreitbartNews/status/822606803720671232">“V. effective”</a> or <a href="https://twitter.com/BreitbartNews/status/822960794174455810">“u mad”</a>. It’s as if the social media director at the company was out of the office for a day, and left his 17-year-old son in charge to wreak havoc on the haters, the MSM, and especially the <a href="https://en.wikipedia.org/wiki/Social_justice_warrior">SJWs</a>. And due to the more informal style preferred by many hyperpartisan accounts, it was increasingly difficult to pick out themes by text analysis, since a link or image preview was needed to provide context for each tweet
+<br /><br />
+                      The most notable and impressive use of such a tactic can be seen in the tweets of one of 2016’s most influential media players: BreitbartNews. Their influence in the rise of Donald Trump and his eventual victory as president is unmatched, as is their astonishingly fast transition from niche, right-wing blog to a household name on social media sites. But on Twitter specifically, their influence comes not only from their language, but by how effective it can be on the platform.
+<br /><br />
+<p style="text-align: center; margin: auto"><a href="#top-of-panel" class="uk-button" data-uk-smooth-scroll>Continue reading...</a></p>
+<br /><br />
+
+
+                    </p>
+
+                </div>
+
+
+                <div id="third" style="display: none">
+                  <div id="drilldown" class="chart"  style=" height: 500px; margin: 0 auto"></div>
+                  <p class="caption">
+                    The above chart shows the top retweets (above 25). categorized by publisher.
+                  </p>
+                  <hr />
+                  <p>
+
+<br />
+As with all social networks, the level of influence one has usually depends on three key factors: number of shares, follower count and comments. Whatever the platform, getting high numbers in these areas generally leads to better search result rankings and higher chances of other people seeing your content. When it comes to Twitter these rules still hold, though retweets seem to hold an elevated level of importance.
+<br /><br />
+Unlike platforms like Facebook, Twitter has for the most part resisted any major filtering algorithm, leaving each retweet as a perfect carbon copy of the original message. For publishers, that means only one small chain to link: a single follower retweeting something could put a story in front of thousands of potential new readers.
+<br /><br />
+This being the case, Twitter style and syntax has become somewhat of an art. The 140-character limit has made writing the perfect caption it’s own form of poetry, with a strategy of trying to cram in as much meaning and tension into a small space.
+<br /><br />
+From analysing the scraped tweets, Breitbart emerges from the hyperpartisan pack as a clear leader in this area. Over the three-day period, BreitbartNews received over 5000 more retweets than the entire hyperpartisan left-wing set of accounts combined. From the liberal accounts, the most retweeted tweet came from ThinkProgress at 335; BreitbartNews had 9 tweets that surpassed this retweet count.
+<br /><br />
+Style isn’t everything and writing a witty caption doesn’t make a news site. But at the same time, Breitbart’s popularity on Twitter can’t be pinned on their amount of followers. Left-wing accounts MotherJones and ThinkProgress both beat Breitbart in amount of followers at the time of scraping. Even fellow right-wing ally TheBlaze had more followers. But the above chart shows that despite this fact, Breitbart has found something that works on Twitter.
+<br /><br />
+Perhaps some of Breitbart’s brilliance comes from their ability to engage supporters and critics in heated, snide and unfiltered banter. A quick scroll through their feed is all it takes: most tweets contain reply numbers well into the double (or <a href="https://twitter.com/BreitbartNews/status/822797518941618176">triple</a>) digits, and some even have more replies than retweets. In comparison, other hyperpartisan accounts with similar amounts of followers rarely breach 50 or 60 replies on a popular tweet.
+<br /><br />
+But Breitbart’s tactics often come at the expense of decency, with many reply feeds more closely resembling places like 4chan and Reddit than a more mainstream social media platform. The internet culture of these darker shades of the web flood user comments, a place where political correctness is the ultimate evil, concealed carrying can solve the world’s problems, and people like <a href="https://twitter.com/DeusVultNS/">this</a> find a voice:
+</p>
+<br /><br />
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/BreitbartNews">@BreitbartNews</a> White America will have to start fighting back. The future of our people is at stake. <a href="https://twitter.com/hashtag/antifa?src=hash">#antifa</a> <a href="https://twitter.com/hashtag/WhiteGenocide?src=hash">#WhiteGenocide</a></p>&mdash; Vince Dorn (@DeusVultNS) <a href="https://twitter.com/DeusVultNS/status/822787772314333184">January 21, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>
+<br /><br />
+Breitbart is not, in itself, synonymous with white nationalism or Trumpism. But you don’t have to look far into their Twitter feed to see how they could benefit from inciting these groups. Pair this strategy with the fact that Twitter has branded itself as an anti-censorship platform, and you’re left with a match made in heaven for right-wing extremists.
+<br /><br />
+More so than any other account, Breitbart has embraced the style of Twitter in a devil-may-care style. There are few, if any, lines that can’t be crossed. If someone get’s offended, they’re probably just another liberal ‘snowflake’ whining about tolerance (some Breitbart followers prefer to use the more derogatory term “libtard"). When someone speaks up against intolerance and alleged bigotry, Breitbart mocks them for their flawed "liberal logic". Ironically, during the time of scraping, BreitbartNews lost it’s treasured mark of rebellion and claim to fame: it received the official, blue Twitter-verified checkmark.
+<br /><br />
+</p>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">NOOOOOOOOOOO<br><br>HOW DID THIS HAPPEN<br><br>STREET CRED DEMOLISHED<br><br>WHO MUST WE HARASS TO LOSE THIS <a href="https://t.co/BgBEB5zE6l">pic.twitter.com/BgBEB5zE6l</a></p>&mdash; Breitbart News (@BreitbartNews) <a href="https://twitter.com/BreitbartNews/status/807637418883108864">December 10, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<br /><br />
+<p>
+Of the ten accounts analysed, it’s clear that none were exempt from blatant partisan-warring. And although the factual accuracy of the stories was left out of this analysis, a strong link still exists between hyperpartisan-style publishers and a bending of the truth.
+<br /><br />
+But beyond the factuality of the tweets, the unifying approach to covering news seen in these publishers is worrying in itself. The rise and electing of Donald Trump has torn down past conceptions of both the Republican and Democratic party; new lines are being drawn around what it means to be politically conservative or liberal.
+<br /><br />
+It appears that the loudest voices in this debate are not the majority, but rather the voices of a loud few. Shares and retweets spread their hot-takes on the latest political gaff regardless of journalistic integrity. They make impassioned and disillusioned Americans on both sides of the political aisle feel reassured in their biases and prejudice. Remarkably, they’ve turned partisan-biased journalism and reporting into a badge of honor, rather than a mark of shame.
+<br /><br />
+Unless people ask for something different, the retweets will keep on coming.
+<br /><br />
+
+  </p>
+  <hr />
+                </div>
+            </div>
+        </li>
+
+        <li class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-2-6" style="margin-top:200px">
+            <div class="uk-panel uk-panel-box" style="margin-bottom: 200px">
+                <h1 style="font-size: 2.5em">Live tweets from the hyperpartisans</h1>
+                <a class="twitter-timeline"  href="https://twitter.com/search?q=from%3ArealDailyWire%20OR%20from%3ARedState%20OR%20from%3AThinkProgress%20OR%20from%3ABreitbartNews%20OR%20from%3AMotherJones%20OR%20from%3AUSUncut%20OR%20from%3ADailykos%20OR%20from%3AtheBlaze%20OR%20from%3Achicksonright%20OR%20from%3AOccupyDemocrats" data-widget-id="823498379355361280">Tweets about from:realDailyWire OR from:RedState OR from:ThinkProgress OR from:BreitbartNews OR from:MotherJones OR from:USUncut OR from:Dailykos OR from:theBlaze OR from:chicksonright OR from:OccupyDemocrats</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+        </li>
+
+
+<script>
+//$("#switch").click(changetab2(){
+//    return false;
+//});
+
+</script>
+</div>
+
+        <div id="footer">
+
+        </div>
+
+    </ul>
+
+
+<footer style="margin-top: 100px; background-color: #777777; width: 100%; color: white; font-style: italic" class="footer">
+<ul class="uk-grid" data-uk-grid-margin style="margin: auto">
+<li class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-2-6" style="">
+  <div class="uk-panel-box footer-panel" style="">
+  <h2 style="color: white">About</h2>
+  <p style="font-size: 1.4em">
+  Benjamin Cooley is a postgrad student pursuing an MSc in Digital Journalism at Goldsmiths. He is currently looking for opportunities in data-driven storytelling and interactive visualisations.
+  </p>
+</div>
+</li>
+
+<li class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-2-6" style="">
+  <div class="footer-panel uk-panel-box" style="">
+  <h2 style="color: white">Projects</h2>
+  <p>
+    <ul>
+      <li><a style="color: white" href="http://igor.gold.ac.uk/~bcool001/portfolio/super-polluters/index.html">Introducing: The Super Polluters</a></li>
+      <li><a style="color: white" href="http://igor.gold.ac.uk/~bcool001/benjamin_cooley_dj/2016/10/26/coffee-cups-charge-convenience-recycling/">The cost of convenience</a></li>
+      <li><a style="color: white" href="http://igor.gold.ac.uk/~bcool001/portfolio/beer-dashboard/beer-dashboard.html">London Beersource</a></li>
+      <li><a style="color: white" href="http://www.eastlondonlines.co.uk/?s=Benjamin+Cooley">Reporting for EastLondonLines</a></li>
+      <li><a style="color: white" href="https://benjamincooley.contently.com/?preview=true">Full clippings of published work</a></li>
+    </ul>
+  </p>
+</div>
+</li>
+
+<li class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-2-6" style="">
+  <div class="footer-panel uk-panel-box" style="">
+  <h2 style="color: white; margin-bottom: -10px">Connect</h2>
+
+    <ul class="share-buttons" style="padding: 20px; margin 25px">
+      <li><a href="https://www.facebook.com/bnj.cooley" title="Connect on Facebook" target="_blank"><img style="width: 40px; margin: 5px" alt="Connect on Facebook" src="images/flat_web_icon_set-color/color/Facebook.png"></a></li>
+      <li><a href="https://twitter.com/bnj_cooley" target="_blank" title="Follow"><img style="width: 40px; margin: 5px"  alt="Follow" src="images/flat_web_icon_set-color/color/Twitter.png"></a></li>
+      <li><a href="https://www.linkedin.com/in/benjamincooley" target="_blank" title="Connect on LinkedIn"><img style="width: 40px; margin: 5px"  alt="Connect on LinkedIn" src="images/flat_web_icon_set-color/color/LinkedIn.png"></a></li>
+      <li><a href="mailto:benjamincooley94@gmail.com" target="_blank" title="Send email"><img style="width: 40px; margin: 5px"  alt="Send email" src="images/flat_web_icon_set-color/color/Email.png"></a></li>
+    </ul>
+
+</div>
+</li>
+
+
+
+</ul>
+</footer>
+
+</body>
+
+
+
+
+</html>
